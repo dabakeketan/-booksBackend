@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 mongoose
-    .connect('mongodb://localhost:27017/books')
+    .connect('mongodb+srv://kdabake:kdabake1234@cluster0.ztlojls.mongodb.net/booksD')
     .then((x) => {
         console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
     })

@@ -5,7 +5,7 @@ let Book = new Schema({
   price: Number,
   author: String,
 }, {
-  collection: 'test_data',
+  collection: 'books',
   timestamps: true
 })
 module.exports = mongoose.model('Book', Book)
