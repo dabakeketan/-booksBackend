@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --stack-size=32000 index.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC"
