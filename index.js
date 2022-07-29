@@ -14,24 +14,24 @@ mongoose
 const bookRoute = require('./routes/book.routes')
 const app = express()
 app.use(bodyParser.json())
-// app.use(
-//     bodyParser.urlencoded({
-//         extended: false,
-//     }),
-// )
-// app.use(cors())
+app.use(
+    bodyParser.urlencoded({
+        extended: false,
+    }),
+)
+app.use(cors())
 
-// app.use((req, res, next) => {
-//     console.log('at origin', req);
-//     res.setHeader('Access-Control-Allow-Origin', '*');
-//     res.setHeader(
-//       'Access-Control-Allow-Headers',
-//       'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-//     );
-//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
+app.use((req, res, next) => {
+    console.log('at origin', req);
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader(
+      'Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+    );
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
   
-//     next();
-//   });
+    next();
+  });
 // Static directory path
 // app.use(express.static(path.join(__dirname, 'dist/angular-mean-crud-tutorial')))
 // API root
