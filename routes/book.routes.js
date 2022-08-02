@@ -35,6 +35,7 @@ bookRoute.route('/read-book/:id').get((req, res) => {
 
 // Update Book
 bookRoute.route('/update-book/:id').put((req, res, next) => {
+  console.log('req', req);
     Book.findByIdAndUpdate(req.params.id, {
     $set: req.body
   }, (error, data) => {
