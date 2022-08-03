@@ -4,7 +4,8 @@ let Book = new Schema({
   title:  String,
   price: Number,
   author: String,
-  language: String
+  language: String,
+  toprated: Boolean
 }, {
   collection: 'books',
   timestamps: true
